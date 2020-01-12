@@ -1,5 +1,6 @@
 # Intro to IoT TiddlyWiki Curriculum
 
+[View the Curruiculum Online](https://dcsim0n.github.io/iot_intro/Intro%20to%20IoT.html)
 ## Getting Started
 
 1. `git clone git@github.com:dcsim0n/iot_intro.git`
