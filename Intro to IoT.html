@@ -183,6 +183,8 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Calendar Event</li>
+
 <li>Digital Temperature &amp; Humidity Library</li>
 
 <li>GettingStarted</li>
@@ -198,6 +200,8 @@ Error message and password prompt
 <li>Web Server</li>
 
 <li>What is a Microcontroller?</li>
+
+<li>Why are YOU here?</li>
 
 </ul>
 </p>
@@ -9408,8 +9412,9 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200112162212720" creator="dana" modified="20200112164337195" modifier="dana" title="$:/DefaultTiddlers">
-<pre>Table_Of_Contents
+<div created="20200112162212720" creator="dana" modified="20200113235737823" modifier="dana" title="$:/DefaultTiddlers">
+<pre>[[Calendar Event]]
+Table_Of_Contents
 Sources
 </pre>
 </div>
@@ -9433,7 +9438,7 @@ Sources
 <div created="20200112162640717" modified="20200112163156374" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200112205709961" creator="dana" modified="20200112205858532" modifier="dana" title="$:/state/sidebar">
+<div created="20200112205709961" creator="dana" modified="20200113233900300" modifier="dana" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200112163832829" creator="dana" modified="20200112164332914" modifier="dana" title="$:/state/tab-1749438307">
@@ -9442,13 +9447,13 @@ Sources
 <div created="20200112205643680" creator="dana" modified="20200112205657714" modifier="dana" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20200112162312082" creator="dana" modified="20200112205640403" modifier="dana" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/More</pre>
+<div created="20200112162312082" creator="dana" modified="20200113235752850" modifier="dana" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div created="20200112163839165" creator="d" modified="20200112163839906" modifier="dana " title="$:/status/UserName">
 <pre>dana</pre>
 </div>
-<div created="20200112205713891" creator="dana" list="Table_Of_Contents Sources" modified="20200112211048558" modifier="dana" title="$:/StoryList">
+<div created="20200113235801707" creator="dana" list="Table_Of_Contents [[Calendar Event]] Sources" modified="20200113235801707" modifier="dana" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9624,6 +9629,23 @@ Sources
     }
 }</pre>
 </div>
+<div created="20200113233902430" creator="dana" modified="20200113235640910" modifier="dana" tags="" title="Calendar Event">
+<pre>!! Title: Intro to Internet of Things, aka Build your own smart weather station (Part 1 of 2)
+
+!! Date: Thursday, March 26nd, 2020
+!!! Time: 6-8pm
+
+!! Description:
+
+This class is all about getting hands on with electronics and technology. It is targeted for all audiences. Even if you've never heard of arduino or Internet of Things, this class still has something for you. Every student will take home there verry own smart weather station kit. What is a smart weather station? Its just like a regular thermomemter or thermostat, except it has a pretty LCD screen you can make your own art for, and connect it to the internet so that you can tell exactly how smart your smart thermostat may or may not be.
+
+Students will learn the basics of what a microcontroller is, how to program them and how to interface with different types of hardware.
+
+Each student will take home a small &quot;breadboard&quot; style circuit with a ESP8266 wifi microcontroller, DHT11 temperature humidity sensor, OLED display screen.
+
+
+</pre>
+</div>
 <div created="20200112203204763" creator="dana" modified="20200112203324914" modifier="dana" tags="" title="Digital Temperature &amp; Humidity Library">
 <pre>Explaing the use of simple libraries like DHT
 
@@ -9720,9 +9742,10 @@ Tiddly Desktop utility for running tiddly wikis locally
 
 * https://github.com/Jermolene/TiddlyDesktop/releases</pre>
 </div>
-<div created="20200112162907547" creator="dana" modified="20200112204954317" modifier="dana" tags="" title="Table_Of_Contents">
+<div created="20200112162907547" creator="dana" modified="20200113235805210" modifier="dana" tags="" title="Table_Of_Contents">
 <pre>Introduction
 
+* [[Why are YOU here?]]
 * [[What is a Microcontroller?|What is a Microcontroller?]]
 * [[What is the Internet of Things?]]
 * [[Arduino vs ESP8266 vs Raspberry Pi|Types of Microcontrollers]]
@@ -9870,12 +9893,22 @@ void loop(void) {
 ```
 </pre>
 </div>
-<div created="20200112205803685" creator="dana" modified="20200112211127152" modifier="dana" title="What is a Microcontroller?">
+<div created="20200112205803685" creator="dana" modified="20200113233716603" modifier="dana" title="What is a Microcontroller?">
 <pre>!! Wikipedia Says
 
 &lt;&lt;&lt;
 A microcontroller (MCU for microcontroller unit) is a small computer on a single metal-oxide-semiconductor (MOS) integrated circuit chip. In modern terminology, it is similar to, but less sophisticated than, a system on a chip (SoC); an SoC may include a microcontroller as one of its components. A microcontroller contains one or more CPUs (processor cores) along with memory and programmable input/output peripherals. Program memory in the form of ferroelectric RAM, NOR flash or OTP ROM is also often included on chip, as well as a small amount of RAM. Microcontrollers are designed for embedded applications, in contrast to the microprocessors used in personal computers or other general purpose applications consisting of various discrete chips. 
 &lt;&lt;&lt;
+
+!! For this class
+
+
+&lt;&lt;&lt;
+We can call a microcontroller a magical device that can take everyday objects or tasks, and add interesting new features to them. Like a coffee maker you can control via text message. Or a drone you can fly with your brain waves.
+
+At it's most basic level, a microcontroller is an electrical device that accepts different types of input, make a series of pre-determined desicions about those inputs, and then create an output based on those decisions.
+&lt;&lt;&lt;
+
 
 !! Types of Microcontrollers
 
@@ -9898,6 +9931,14 @@ A microcontroller (MCU for microcontroller unit) is a small computer on a single
 *** List some specifications here
 
 </pre>
+</div>
+<div created="20200113230947688" creator="dana" modified="20200113232615058" modifier="dana" tags="" title="Why are YOU here?">
+<pre>A brief introduction from everyone in the room
+
+# What is your name?
+# Where do you live?
+# How did you hear about this class?
+# One thing that you know about the Internet of Things or Arduinos ( Nothing is an ok answer )</pre>
 </div>
 
 </div>
