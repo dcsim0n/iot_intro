@@ -183,6 +183,8 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Adafruit Sensor Libraries</li>
+
 <li>Calendar Event</li>
 
 <li>Digital Temperature &amp; Humidity Library</li>
@@ -9438,7 +9440,7 @@ Sources
 <div created="20200112162640717" modified="20200112163156374" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200112205709961" creator="dana" modified="20200113233900300" modifier="dana" title="$:/state/sidebar">
+<div created="20200112205709961" creator="dana" modified="20200119111319900" modifier="dana" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200112163832829" creator="dana" modified="20200112164332914" modifier="dana" title="$:/state/tab-1749438307">
@@ -9447,13 +9449,13 @@ Sources
 <div created="20200112205643680" creator="dana" modified="20200112205657714" modifier="dana" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20200112162312082" creator="dana" modified="20200113235752850" modifier="dana" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Tools</pre>
+<div created="20200112162312082" creator="dana" modified="20200114034213937" modifier="dana" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20200112163839165" creator="d" modified="20200112163839906" modifier="dana " title="$:/status/UserName">
 <pre>dana</pre>
 </div>
-<div list="[[Calendar Event]] Table_Of_Contents Sources" title="$:/StoryList">
+<div list="[[Adafruit Sensor Libraries]] [[Calendar Event]] Table_Of_Contents Sources" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9629,6 +9631,37 @@ Sources
     }
 }</pre>
 </div>
+<div created="20200118153427110" creator="dana" modified="20200118154435898" modifier="dana" tags="" title="Adafruit Sensor Libraries">
+<pre>[[Unified Sensor Library| https://github.com/adafruit/Adafruit_Sensor]]
+
+* use `bme.getEvent( event_t* )` to get data
+* use `bme.getSensor( sensor_t* )` to get sensor description
+
+
+```
+Adafruit_TSL2561 tsl = Adafruit_TSL2561(TSL2561_ADDR_FLOAT, 12345);
+ /* Get a new sensor event */ 
+ sensors_event_t event;
+ tsl.getEvent(&amp;event);
+ 
+ /* Display the results (light is measured in lux) */
+ if (event.light)
+ {
+   Serial.print(event.light); Serial.println(&quot; lux&quot;);
+ }
+ else
+ {
+   /* If event.light = 0 lux the sensor is probably saturated
+      and no reliable data could be generated! */
+   Serial.println(&quot;Sensor overload&quot;);
+ }
+```
+
+
+
+[[BME 280 Library | https://github.com/adafruit/Adafruit_BME280_Library]]
+</pre>
+</div>
 <div created="20200113233902430" creator="dana" modified="20200114032754772" modifier="dana" tags="" title="Calendar Event">
 <pre>!! Title: Intro to Internet of Things, aka Build your own smart weather station (Part 1 of 2)
 
@@ -9737,7 +9770,7 @@ https://github.com/adafruit/Adafruit_SSD1306
 
 Need simple code example of writing text to the OLED screen over i2c buss</pre>
 </div>
-<div created="20200112162404830" creator="dana" modified="20200112163946404" modifier="dana" tags="" title="Sources" type="text/vnd.tiddlywiki">
+<div created="20200112162404830" creator="dana" modified="20200118153639658" modifier="dana" tags="" title="Sources" type="text/vnd.tiddlywiki">
 <pre>Notes on ESP8266 chip
 
 * https://github.com/dcsim0n/njaws-arduino/blob/master/ESP8266_Notes.md
@@ -9746,6 +9779,10 @@ Arduino Uno simulator and Code Debugger
 
 * https://www.sites.google.com/site/unoardusim/home
 
+Sensor Libraries
+
+* [[Adafruit Sensor Libraries]]
+
 Fritzing PCB layout and programming environment
 
 * https://fritzing.org/home/
@@ -9753,6 +9790,10 @@ Fritzing PCB layout and programming environment
 Arduino IDE docs for the ESP8266 
 
 * https://arduino-esp8266.readthedocs.io/en/latest/
+
+Makefile for ESP ARDUINO
+
+* https://github.com/plerup/makeEspArduino
 
 Tiddly Desktop utility for running tiddly wikis locally
 
